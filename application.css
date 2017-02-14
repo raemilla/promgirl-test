@@ -1,0 +1,19 @@
+#payment-details {
+  padding:10px;
+  background-color: rgba(154,154,154, 0.2);
+}
+
+#payment-head{
+  display:inline-block;
+}
+
+#security{
+  font-style: italic;
+  color:rgb(154,154,154);
+  margin-left: 33%;
+}
+
+.extra-info{
+  display:inline-block;
+  padding:10px;
+}

@@ -9,65 +9,82 @@
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <script src="application.js"></script>
+    <link rel="stylesheet" href="application.css">
+    <script src="https://use.fontawesome.com/d0a6f7e1c7.js"></script>
     <title>
       PromGirl Checkout - Frontend Developer Test
     </title>
   </head>
   <body>
     <div class="container">
+      <div class="col-sm-6">
+        <h3>Basic Information</h3>
     <div id="basic-info">
-      <h3>Basic Information</h3>
-      <form>
-        <input type="text" name="email" placeholder="Email Address*"></input><br>
-        <input type="text" name="phone" placeholder="Phone Number*"></input><br>
-        <select name="event">
+      <form class="form-group">
+        <input type="text" name="email" placeholder="Email Address*" class="form-control"></input>
+        <input type="text" name="phone" placeholder="Phone Number*" class="form-control"></input>
+        <select name="event" class="form-control">
           <option value="Choose Event*" selected>Choose Event*</option>
-        </select><br>
-        <label>Date of Event</label>
-        <select name="date">
+        </select>
+      </form>
+      <form class="form-inline">
+        <label>Date of Event</label><br>
+        <select name="date" class="form-control">
           <option value="date" selected>Date*</option>
         </select>
-        <select name="month">
+        <select name="month" class="form-control">
           <option value="month" selected>Month*</option>
         </select>
-        <select name="year">
+        <select name="year" class="form-control">
           <option value="year" selected>Year*</option>
         </select>
       </form>
     </div>
+    <h3>Shipping Address</h3>
     <div id="shipping-address">
-      <h3>Shipping Address</h3>
-      <form>
-        <input type="text" name="fullname" placeholder="Full Name*"></input><br>
-        <select name="country">
+      <form class="form-group">
+        <input type="text" name="fullname" placeholder="Full Name*" class="form-control"></input>
+        <select name="country" class="form-control">
           <option value="Country*" selected>Country*</option>
-        </select><br>
-        <input type="text" name="address-1" placeholder="Address Line 1*"></input><br>
-        <input type="text" name="address-2" placeholder="Address Line 2"></input><br>
-        <input type="text" name="city" placeholder="City*"></input>
-        <select name="State">
-          <option value="State*" selected>State*</option>
-        </select><br>
-        <input type="text" name="zip" placeholder="Zip Code*"></input>
-      </form>
-    </div>
-    <div id="shipping-method">
-      <h3>Shipping Method</h3>
-    </div>
-    <div id="payment-details">
-      <h3>Payment Details</h3>
-      <form>
-        <input type="text" name="card-number" placeholder="Card Number" id="credit-card"></input><br>
-        <label>Expiration Date</label>
-        <select name="month">
-          <option value="02" selected>02</option>
         </select>
-        <select name="year">
-          <option value="2017" selected>2017</option>
-        </select><br>
-        <label>Security Code</label>
-        <input type="text" name="security-code"></input>
+        <input type="text" name="address-1" placeholder="Address Line 1*" class="form-control"></input>
+        <a>Add Address Line 2</a>
+        <input type="text" name="address-2" placeholder="Address Line 2" id="address-2" class="form-control"></input>
+        <input type="text" name="zip" placeholder="Zip Code*" class="form-control"></input>
       </form>
+      <form class="form-inline">
+        <input type="text" name="city" placeholder="City*" class="form-control"></input>
+        <input type="text" name="state" placeholder="State*" class="form-control"></input>
+      </form>
+    </div>
+    <h3>Shipping Method</h3>
+    <div id="shipping-method">
+    </div>
+    <h3 id="payment-head">Payment Details</h3><span id="security"><i class="fa fa-lock" aria-hidden="true"></i> Secure 256-bit encryption</span>
+    <div id="payment-details">
+      <form class="form-group">
+        <input type="text" name="card-number" placeholder="Card Number" id="credit-card" class="form-control"></input>
+      </form>
+      <form class="form-inline">
+        <div class="extra-info">
+          <label>Expiration Date</label><br>
+              <select name="month" class="form-control">
+                <option value="02" selected>02</option>
+              </select>
+              <select name="year" class="form-control">
+                <option value="2017" selected>2017</option>
+              </select><br>
+          </div>
+          <div class="extra-info">
+              <label>Security Code</label><br>
+              <input type="text" name="security-code" class="form-control"></input>
+          </div>
+          <div class="extra-info">
+            <i class="fa fa-3x fa-credit-card" aria-hidden="true"></i>
+          </div>
+        </div>
+      </form>
+    </div>
     </div>
   </div>
   </body>
