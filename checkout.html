@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <title>
+      PromGirl Checkout - Frontend Developer Test
+    </title>
+  </head>
+  <body>
+    <div id="basic-info">
+      <h3>Basic Information</h3>
+      <form>
+        <input type="text" name="email" placeholder="Email Address*"></input><br>
+        <input type="text" name="phone" placeholder="Phone Number*"></input><br>
+        <select name="event">
+          <option value="Choose Event*" selected>Choose Event*</option>
+        </select><br>
+        <label>Date of Event</label>
+        <select name="date">
+          <option value="date" selected>Date*</option>
+        </select>
+        <select name="month">
+          <option value="month" selected>Month*</option>
+        </select>
+        <select name="year">
+          <option value="year" selected>Year*</option>
+        </select>
+      </form>
+    </div>
+    <div id="shipping-address">
+      <h3>Shipping Address</h3>
+      <form>
+        <input type="text" name="fullname" placeholder="Full Name*"></input><br>
+        <select name="country">
+          <option value="Country*" selected>Country*</option>
+        </select><br>
+        <input type="text" name="address-1" placeholder="Address Line 1*"></input><br>
+        <input type="text" name="address-2" placeholder="Address Line 2"></input><br>
+        <input type="text" name="city" placeholder="City*"></input>
+        <select name="State">
+          <option value="State*" selected>State*</option>
+        </select><br>
+        <input type="text" name="zip" placeholder="Zip Code*"></input>
+      </form>
+    </div>
+    <div id="shipping-method">
+      <h3>Shipping Method</h3>
+    </div>
+    <div id="payment-details">
+      <h3>Payment Details</h3>
+      <form>
+        <input type="text" name="card-number" placeholder="Card Number"></input><br>
+        <label>Expiration Date</label>
+        <select name="month">
+          <option value="02" selected>02</option>
+        </select>
+        <select name="year">
+          <option value="2017" selected>2017</option>
+        </select><br>
+        <label>Security Code</label>
+        <input type="text" name="security-code"></input>
+      </form>
+    </div>
+  </body>
+</html>
