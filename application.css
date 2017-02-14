@@ -21,3 +21,9 @@
 a{
   cursor: pointer;
 }
+
+.est-arrival{
+  color:silver;
+  font-style: italic;
+  font-size: 10px;
+}

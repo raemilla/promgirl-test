@@ -1,18 +1,45 @@
 $(document).ready(function() {
+  // credit card auto format
   $('#credit-card').on('keypress change',function() {
     $(this).val(function (index, value) {
       return value.replace(/\W/gi, '').replace(/(.{4})/g, '$1 ');
     });
   });
 
+  // collapsible address 2 line
   $('#address-2').hide();
   $('#add-address-2').on('click', function() {
     $('#address-2').show();
     $(this).hide();
   });
 
+  // est arrival dates
+  var today = new Date();
+  var dd = today.getDate();
+  var monthNames = ["January", "February", "March", "April", "May", "June",
+  "July", "August", "September", "October", "November", "December"];
+
+  // ground est arrival
+  var groundMin = dd+5;
+  var groundMax = dd+7;
+
+  $("#ground").append("<br><span class='est-arrival'> Est Arrival: "+groundMin+"-"+groundMax+" "+monthNames[today.getMonth()]+"</span>");
+
+  // 3 day est arrival
+  var threeDay = dd+3;
+  $("#3-day").append("<br><span class='est-arrival'> Est Arrival: "+threeDay+" "+monthNames[today.getMonth()]+"</span>");
+
+  // 2 day est arrival
+  var twoDay = dd+2;
+  $("#2-day").append("<br><span class='est-arrival'> Est Arrival: "+twoDay+" "+monthNames[today.getMonth()]+"</span>");
+
+  //next day est arrival
+  var nextDay = dd+1;
+  $("#next-day").append("<br><span class='est-arrival'> Est Arrival: "+nextDay+" "+monthNames[today.getMonth()]+"</span>");
+
+  // zip code autofill
+
   $(function() {
-		// IMPORTANT: Fill in your client key
 		var clientKey = "js-S6EStxQmNgGXBnz1bW456JKd0qzsb503cEVGbM2Y3IWE5vGhsKmzt6NtwmWHrWLE";
 
 		var cache = {};

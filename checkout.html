@@ -40,6 +40,7 @@
         </select>
       </form>
     </div>
+
     <h3>Shipping Address</h3>
     <div id="shipping-address">
       <form class="form-group">
@@ -58,9 +59,29 @@
       </form>
       <div class="text-error"></div>
     </div>
+
     <h3>Shipping Method</h3>
     <div id="shipping-method">
+      <div class="radio">
+        <label>
+          <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1">
+          <span id="ground">Continental US Ground</span>
+        </label><br>
+        <label>
+          <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+          <span id="3-day">Continental US 3 Day</span>
+        </label><br>
+        <label>
+          <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3">
+          <span id="2-day">Continental US 2 Day</span>
+        </label><br>
+        <label>
+          <input type="radio" name="optionsRadios" id="optionsRadios4" value="option4">
+          <span id="next-day">Cont US Next Business Day</span>
+        </label>
+      </div>
     </div>
+
     <h3 id="payment-head">Payment Details</h3><span id="security"><i class="fa fa-lock" aria-hidden="true"></i> Secure 256-bit encryption</span>
     <div id="payment-details">
       <form class="form-group">
