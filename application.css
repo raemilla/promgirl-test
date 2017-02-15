@@ -131,3 +131,15 @@ label {
   height:49px;
   margin-top:2.9%;
 }
+
+#cc-month, #cc-year {
+  margin-left: 0px;
+  margin-right:0px;
+}
+
+#merch {
+  height:470px;
+  margin-top:3%;
+  margin-left:3%;
+  position:fixed;
+}
