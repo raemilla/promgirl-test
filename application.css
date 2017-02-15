@@ -143,3 +143,66 @@ label {
   margin-left:3%;
   position:fixed;
 }
+
+/*mobile responsive*/
+
+@media screen and (max-width: 768px){
+  #logo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  #merch {
+    visibility: hidden;
+  }
+
+  #date, #month, #year {
+    display: inline-block;
+    width:31%;
+  }
+
+  #city, #state {
+    display:inline-block;
+    width:48%;
+  }
+
+  #security {
+    margin:0px;
+    padding:10px 10px 10px 25px;
+  }
+
+  #cc-month, #cc-year {
+    display: inline-block;
+    width:48%;
+  }
+
+  .s-code {
+    width:46%;
+  }
+
+  #cc {
+    margin-left:40%;
+    margin-right:40%;
+  }
+
+  #paypal {
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
+  }
+
+  .security-seal{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media screen and (max-width: 320px){
+  #cc {
+    position: relative;
+    top:-65px;
+    left:20px;
+  }
+}
