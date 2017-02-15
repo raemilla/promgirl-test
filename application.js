@@ -6,6 +6,13 @@ $(document).ready(function() {
     });
   });
 
+  // phone auto format
+  $('#phone').on('keypress change',function() {
+    $(this).val(function (index, value) {
+      return value.replace(/(\d{3})(\d{3})(\d{4})/, "$1-$2-$3");
+    });
+  });
+
   // collapsible address 2 line
   $('#address-2').hide();
   $('#add-address-2').on('click', function() {
@@ -105,4 +112,33 @@ $(document).ready(function() {
 			}
 		}).trigger("change");
 	});
+
+  // validate email
+  function validateEmail(email) {
+    var re = /\S+@\S+\.\S+/
+    return re.test(email);
+  }
+
+  $("#email").on('blur', function() {
+    var enteredEmail = $(this).val();
+    if (validateEmail(enteredEmail)) {
+      $("#email").addClass("valid-check");
+      $(".email-check").addClass("valid");
+    }
+  });
+
+  // validate phone
+  function validatePhone(phone) {
+    var re = /^[2-9]\d{2}-\d{3}-\d{4}$/
+    return re.test(phone);
+  }
+
+  $("#phone").on('blur', function() {
+    var enteredPhone = $(this).val();
+    if (validatePhone(enteredPhone)) {
+      $("#phone").addClass("valid-check");
+      $(".phone-check").addClass("valid");
+    }
+  })
+
 });

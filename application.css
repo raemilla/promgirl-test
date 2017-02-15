@@ -10,7 +10,18 @@
 #security{
   font-style: italic;
   color:rgb(154,154,154);
-  margin-left: 33%;
+  margin-left: 28%;
+  font-size:11px;
+}
+
+.shipping-cost{
+  margin-left: 17%;
+  font-size:11px;
+}
+
+.form-control{
+  margin: 5px;
+  border-radius: 0px;
 }
 
 .extra-info{
@@ -20,10 +31,103 @@
 
 a{
   cursor: pointer;
+  color: #E83996;
+  margin: 5px 9px;
+  font-size:11px;
 }
 
 .est-arrival{
-  color:silver;
+  color:rgb(154,154,154);
   font-style: italic;
   font-size: 10px;
+}
+
+#city {
+  width:49%;
+  margin:-5px 0px 0px 5px;
+}
+
+#state{
+  margin: -5px 0px 0px 0px;
+  width:49%;
+}
+
+.valid-check{
+  border-color:green;
+}
+
+.email-check{
+  margin-top: 11.5%;
+  margin-right:3%;
+  color:green;
+  visibility: hidden;
+}
+
+.phone-check {
+  margin-top:20%;
+  margin-right:3%;
+  color:green;
+  visibility: hidden;
+}
+
+.valid {
+  visibility: visible !important;
+}
+
+#date {
+  width:32%;
+  margin:0px 0px 0px 5px;
+}
+
+#month, #year {
+  margin: 0px;
+  width:32%;
+}
+
+label {
+  margin-left: 5px;
+}
+
+[tooltip]:before {
+    content: attr(tooltip);
+    position: absolute;
+    opacity: 0;
+
+    transition: all 0.15s ease;
+}
+
+[tooltip]:hover:before {
+    opacity: 1;
+
+    background: black;
+    padding:8px;
+    color:white;
+    margin-left: 120px;
+    border-radius: 5px;
+}
+
+#cc{
+  position:relative;
+  top:10px;
+}
+
+#credit-card {
+  width:95%;
+}
+
+#logo {
+  height: 50px;
+  padding:10px;
+}
+
+#paypal {
+  height: 50px;
+  margin-top:2%;
+  margin-left:2%;
+}
+
+.security-seal{
+  padding:3px;
+  height:49px;
+  margin-top:2.9%;
 }

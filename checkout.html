@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -16,26 +17,27 @@
     </title>
   </head>
   <body>
+    <img src="images/logo.jpg" id="logo">
     <div class="container">
-      <div class="col-sm-6">
+      <div class="col-sm-5">
         <h3>Basic Information</h3>
     <div id="basic-info">
       <form class="form-group">
-        <input type="text" name="email" placeholder="Email Address*" class="form-control"></input>
-        <input type="text" name="phone" placeholder="Phone Number*" class="form-control"></input>
+        <input type="text" name="email" placeholder="Email Address*" class="form-control" id="email"><span class='glyphicon glyphicon-ok form-control-feedback email-check' aria-hidden='true'></span></input>
+        <input type="text" name="phone" placeholder="Phone Number*" class="form-control" id="phone"><span class='glyphicon glyphicon-ok form-control-feedback phone-check' aria-hidden='true'></span></input>
         <select name="event" class="form-control">
           <option value="Choose Event*" selected>Choose Event*</option>
         </select>
       </form>
       <form class="form-inline">
         <label>Date of Event</label><br>
-        <select name="date" class="form-control">
+        <select name="date" class="form-control" id="date">
           <option value="date" selected>Date*</option>
         </select>
-        <select name="month" class="form-control">
+        <select name="month" class="form-control" id="month">
           <option value="month" selected>Month*</option>
         </select>
-        <select name="year" class="form-control">
+        <select name="year" class="form-control" id="year">
           <option value="year" selected>Year*</option>
         </select>
       </form>
@@ -49,13 +51,13 @@
           <option value="Country*" selected>Country*</option>
         </select>
         <input type="text" name="address-1" placeholder="Address Line 1*" class="form-control"></input>
-        <a id="add-address-2">Add Address Line 2</a>
+        <a id="add-address-2" tooltip="Apartment, suite, unit, building, floor, etc"><i class="fa fa-plus-square-o" aria-hidden="true"></i> Add Address Line 2</a>
         <input type="text" name="address-2" placeholder="Address Line 2" id="address-2" class="form-control"></input>
         <input type="text" name="zipcode" placeholder="Zip Code*" class="form-control"></input>
       </form>
       <form class="form-inline">
-        <input type="text" name="city" placeholder="City*" class="form-control"></input>
-        <input type="text" name="state" placeholder="State*" class="form-control"></input>
+        <input type="text" name="city" placeholder="City*" class="form-control" id="city"></input>
+        <input type="text" name="state" placeholder="State*" class="form-control" id="state"></input>
       </form>
       <div class="text-error"></div>
     </div>
@@ -63,19 +65,19 @@
     <h3>Shipping Method</h3>
     <div id="shipping-method">
       <div class="radio">
-        <label>
+        <label class="shipping-option">
           <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1">
           <span id="ground">Continental US Ground</span>
         </label><br>
-        <label>
+        <label class="shipping-option">
           <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
           <span id="3-day">Continental US 3 Day</span>
         </label><br>
-        <label>
+        <label class="shipping-option">
           <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3">
           <span id="2-day">Continental US 2 Day</span>
         </label><br>
-        <label>
+        <label class="shipping-option">
           <input type="radio" name="optionsRadios" id="optionsRadios4" value="option4">
           <span id="next-day">Cont US Next Business Day</span>
         </label>
@@ -101,9 +103,12 @@
               <label>Security Code</label><br>
               <input type="text" name="security-code" class="form-control"></input>
           </div>
-          <div class="extra-info">
+          <div class="extra-info" id="cc">
             <i class="fa fa-3x fa-credit-card" aria-hidden="true"></i>
           </div>
+          <img src="images/payment-paypal-2.png" id="paypal">
+          <img src="images/getseal.gif" class="security-seal">
+          <img src="images/ts_badge_v3.png" class="security-seal">
         </div>
       </form>
     </div>
